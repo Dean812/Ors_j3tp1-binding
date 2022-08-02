@@ -13,5 +13,8 @@ onLike() {
   window.alert(`I like ${this.hero}`);
   this.hero = 'Batman';
 }
-
+onBoolLike(event:Boolean) {
+  alert(`I like ${this.hero} = ${event}`);
+  this.hero = 'Spiderman';
+}
 }

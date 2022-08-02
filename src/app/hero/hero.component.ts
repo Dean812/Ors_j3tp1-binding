@@ -8,7 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class HeroComponent implements OnInit {
 
   @Input() name= "default";
-  @Output() liked = new EventEmitter();// 
+  @Output() liked = new EventEmitter<Boolean>();//
+  @Output() booLiked = new EventEmitter<Boolean>();
   constructor() { }
 
   ngOnInit(): void {
