@@ -1,5 +1,5 @@
-<p>{{name}} hero works!</p>
-
-<button (click)="liked.emit(true)">Like</button>
+<p *ngIf="name === 'Batman'">{{name}} hero works!</p>
+<br><!-- n'affichera que si name = batman , ou l'opposé ▼  -->
+<br><!-- <p *ngIf="name !== 'Batman'">Hero was not fund -->
+<button (click)=" liked.emit(true)">Like</button><br>
 <button (click)="booLiked.emit(false)">Unlike</button>
-<!--   -->
