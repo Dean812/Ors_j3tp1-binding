@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my component : tp-composant';
+  hero= 'spiderman'
 }
