@@ -1,5 +1,17 @@
-<p>Homelander :  You are the real Hero</p>
+<h3>Homelander : You are the real Hero</h3>
 
-<ul>  <!-- from heroes in ts ▼--> <!-- Where da fck that come from (index)-->
+<!-- from heroes in ts ▼-->
+<!-- Where da fck that come from (index)-->
+<!-- <ul>
   <li *ngFor="let hero of heroes; index as myIndex">{{myIndex+1}}. {{hero.name}}</li>
+</ul> -->
+
+<ul>
+  <li *ngFor="let hero of heroes; index as myIndex; trackBy: trackByHeroes">
+    <div [ngSwitch]="hero.team">
+      <div *ngSwitchCase="'avengers'">{{myIndex+1}}. {{hero.name}} :  is an avengers</div>
+      <div *ngSwitchCase="'villains'">{{myIndex+1}}. {{hero.name}} :   is a villain</div>
+      <div *ngSwitchDefault>{{myIndex+1}}. {{hero.name}}</div>
+    </div>
+  </li>
 </ul>

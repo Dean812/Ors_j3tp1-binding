@@ -21,4 +21,9 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  trackByHeroes(index: number, hero:Hero): number {
+    return hero.id;
+  }
+
+
 }
