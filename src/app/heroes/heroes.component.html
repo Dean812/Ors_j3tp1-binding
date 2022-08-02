@@ -1,1 +1,5 @@
-<p>heroes works!</p>
+<p>Homelander :  You are the real Hero</p>
+
+<ul>  <!-- from heroes in ts ▼--> <!-- Where da fck that come from (index)-->
+  <li *ngFor="let hero of heroes; index as myIndex">{{myIndex+1}}. {{hero.name}}</li>
+</ul>
