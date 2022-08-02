@@ -1,5 +1,8 @@
-<p *ngIf="name === 'Batman'">{{name}} hero works!</p>
-<br><!-- n'affichera que si name = batman , ou l'opposé ▼  -->
-<br><!-- <p *ngIf="name !== 'Batman'">Hero was not fund -->
+<p *ngIf="name === 'Batman'; else noHero">{{name}} hero works!</p>
+<ng-template #noHero> <!-- corélation en NoHero -->
+  <p>Hero was not find</p> <!-- apparait dans la balise p(the first one) -->
+</ng-template>
 <button (click)=" liked.emit(true)">Like</button><br>
 <button (click)="booLiked.emit(false)">Unlike</button>
+
+
